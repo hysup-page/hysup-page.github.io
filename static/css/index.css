@@ -36,6 +36,14 @@ body {
 
 }
 
+.publication-video .image,
+.publication-video .image img {
+  width: 100%;
+  height: auto !important;
+  max-height: none !important;
+  display: block;
+}
+
 .publication-banner video {
   position: relative;
   left: auto;
