@@ -258,6 +258,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
+          Expressive human pose and shape estimation (EHPS)—which jointly captures body, hand, and facial motion—is vital for emerging AR/VR and telepresence applications.    
+          State-of-the-art holistic regressors accurately recover overall body pose yet still yield fused or imprecise fingers, whereas hand-specific networks resolve fine articulation but sacrifice global coherence.  
+          </p>
+          <p>
             We benchmark two leading holistic models (<span class="model">SMPLest-X</span>, <span class="model">SMPLer-X</span>) and two hand-specialized models (HaMeR, WiLoR) on the EHF dataset and confirm this trade-off.
             Leveraging their complementary strengths, we introduce <strong>HySUP</strong>—a lightweight pipeline that replaces a SMPLest-X hand region with HaMeR output through a two-stage seam-aware alignment:
           </p>
@@ -270,7 +274,7 @@
           </p>
           <p>
             These results highlight a simple path forward: <em>“plug-and-play”</em> fusion of specialist parts can outperform ever-larger holistic models at a fraction of the computational cost.
-            Code and more results can be found on our <a href="https://hysup-page.github.io/" target="_blank">project page</a>.
+            
           </p>
         </div>
       </div>

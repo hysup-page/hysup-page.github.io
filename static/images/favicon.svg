@@ -1,37 +1,13 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<circle style="fill:#FFDA44;" cx="256" cy="256" r="256"/>
-<path style="fill:#338AF3;" d="M0,256C0,114.616,114.616,0,256,0s256,114.616,256,256"/>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Face Circle -->
+  <circle cx="100" cy="100" r="90" fill="#FFEB3B" stroke="black" stroke-width="4"/>
+  
+  <!-- Eyes -->
+  <circle cx="70" cy="75" r="10" fill="black"/>
+  <circle cx="130" cy="75" r="10" fill="black"/>
+  
+  <!-- Smile -->
+  <path d="M60,120 Q100,160 140,120" stroke="black" stroke-width="6" fill="none" stroke-linecap="round"/>
 </svg>
+
