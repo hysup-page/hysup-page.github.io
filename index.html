@@ -2,39 +2,31 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="Improving Whole-Body 3D Human Reconstruction from a Single RGB Image via Hybrid Mesh Optimization">
+  <meta name="description" content="Improving Whole-Body 3D Human Reconstruction from a Single RGB Image via Hybrid Mesh Optimization">
   <meta name="keywords" content="Expressive human pose estimation, SMPL-X, 3-D reconstruction, optimization, hybrid models">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Improving Whole-Body 3D Human Reconstruction from a Single RGB Image via Hybrid Mesh Optimization</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-
+  <!-- Fonts and Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
+  <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -42,47 +34,6 @@
   <script src="./static/js/index.js"></script>
 </head>
 <body>
-<!-- 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav> -->
-
 
 <section class="hero">
   <div class="hero-body">
@@ -91,158 +42,70 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Improving Whole-Body 3D Human Reconstruction from a Single RGB Image via Hybrid Mesh Optimization</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://anonymous_email.com">Anonymous Authors</a><sup>1</sup></span>
-            <span class="author-block">
-              <!-- <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span> -->
+            <span class="author-block"><a href="https://anonymous_email.com">Anonymous Authors</a><sup>1</sup></span>
           </div>
-
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Anonymous University</span>
-            <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
           </div>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://drive.google.com/file/d/1kD668gJqmZ8HblyiFvh8cupPzp5sE2Ht/view?usp=sharing"
-                   class="external-link button is-normal is-rounded is-dark" target="_blank">
-                  <span class="icon is-small">
-                    <i class="fas fa-file-pdf" style="color: white;"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <!-- <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span> -->
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code (Release soon)</span>
-                  </a>
-              </span>
-              <!-- Dataset Link.
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a> -->
-            </div>
-
+          <div class="publication-links">
+            <span class="link-block">
+              <a href="https://drive.google.com/file/d/1kD668gJqmZ8HblyiFvh8cupPzp5sE2Ht/view?usp=sharing"
+                 class="external-link button is-normal is-rounded is-dark" target="_blank">
+                <span class="icon is-small">
+                  <i class="fas fa-file-pdf" style="color: white;"></i>
+                </span>
+                <span>Paper</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="#" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Code (Release soon)</span>
+              </a>
+            </span>
           </div>
+
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section> -->
-
-
-
-
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-          Expressive human pose and shape estimation (EHPS)—which jointly captures body, hand, and facial motion—is vital for emerging AR/VR and telepresence applications.    
-          State-of-the-art holistic regressors accurately recover overall body pose yet still yield fused or imprecise fingers, whereas hand-specific networks resolve fine articulation but sacrifice global coherence.  
-          </p>
-          <p>
-            We benchmark two leading holistic models (<span class="model">SMPLest-X</span>, <span class="model">SMPLer-X</span>) and two hand-specialized models (HaMeR, WiLoR) on the EHF dataset and confirm this trade-off.
-            Leveraging their complementary strengths, we introduce <strong>HySUP</strong>—a lightweight pipeline that replaces a SMPLest-X hand region with HaMeR output through a two-stage seam-aware alignment:
-          </p>
+          <p>Expressive human pose and shape estimation (EHPS)—which jointly captures body, hand, and facial motion—is vital for emerging AR/VR and telepresence applications. State-of-the-art holistic regressors accurately recover overall body pose yet still yield fused or imprecise fingers, whereas hand-specific networks resolve fine articulation but sacrifice global coherence.</p>
+          <p>We benchmark two leading holistic models (<span class="model">SMPLest-X</span>, <span class="model">SMPLer-X</span>) and two hand-specialized models (HaMeR, WiLoR) on the EHF dataset and confirm this trade-off. Leveraging their complementary strengths, we introduce <strong>HySUP</strong>—a lightweight pipeline that replaces a SMPLest-X hand region with HaMeR output through a two-stage seam-aware alignment:</p>
           <ol>
-            <li>A PCA-guided Procrustes transform for scale and pose normalization, followed by</li>
-            <li>A rigid-as-possible refinement that enforces vertex- and normal-level consistency along the wrist seam.</li>
+            <li>A PCA-guided Procrustes transform for scale and pose normalization</li>
+            <li>A rigid-as-possible refinement that enforces vertex- and normal-level consistency along the wrist seam</li>
           </ol>
-          <p>
-            Without retraining and with only <span class="si-unit">150&nbsp;ms</span> of overhead, HySUP reduces hand PA-MPVPE and PA-MPJPE on EHF by <span class="si-unit">3.30&nbsp;mm</span> (<span class="percent">27.11%</span>) and <span class="si-unit">3.55&nbsp;mm</span> (<span class="percent">29.48%</span>), respectively, while preserving full-body accuracy.
-          </p>
-          <p>
-            These results highlight a simple path forward: <em>“plug-and-play”</em> fusion of specialist parts can outperform ever-larger holistic models at a fraction of the computational cost.
-            
-          </p>
+          <p>Without retraining and with only <span class="si-unit">150&nbsp;ms</span> of overhead, HySUP reduces hand PA-MPVPE and PA-MPJPE on EHF by <span class="si-unit">3.30&nbsp;mm</span> (<span class="percent">27.11%</span>) and <span class="si-unit">3.55&nbsp;mm</span> (<span class="percent">29.48%</span>), respectively, while preserving full-body accuracy.</p>
+          <p>These results highlight a simple path forward: <em>“plug-and-play”</em> fusion of specialist parts can outperform ever-larger holistic models at a fraction of the computational cost.</p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
   </div>
 </section>
 
-
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="has-text-centered">
-      <h2 class="title is-3">EHF Visualizations</h2>
-      <div class="publication-video">
-        <img src="./static/images/mapr_compare_result.webp" 
-             alt="MAPR Comparison Result"
-             style="display: block; max-width: 100%; height: auto; margin: 0 auto;">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">EHF Visualizations</h2>
+        <div class="publication-video">
+          <img src="./static/images/mapr_compare_result.webp"
+               alt="MAPR Comparison Result"
+               style="width: 100%; height: auto; display: block;">
+        </div>
       </div>
     </div>
   </div>
 </section>
-
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
@@ -256,17 +119,12 @@
   </div>
 </section>
 
-
 <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+          <p>This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
         </div>
       </div>
     </div>
